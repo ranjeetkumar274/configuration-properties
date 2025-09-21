@@ -13,7 +13,7 @@ spring:
         - id: platform-demo
           uri: PLATFORM-DEMO
           predicates:
-            - Path=/tests/**
+            - Path=/tests
 
 
 # Eureka client configuration for service discovery
