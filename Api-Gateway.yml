@@ -1,9 +1,7 @@
 server:
   port: 3333
 
-spring:
-  application:
-    name: Api-Gateway
+
 spring:
   cloud:
     gateway:
