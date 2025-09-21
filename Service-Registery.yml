@@ -7,3 +7,4 @@ eureka:
     fetch-registry: false
   instance:
     hostname: localhost
+msg: Service-Registery from github is called
