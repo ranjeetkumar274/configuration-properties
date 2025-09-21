@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: platform-demo
+        - id: PLATFORM-DEMO
           uri: lb://Platform-Demo  # Load balanced URI to Platform-Demo service
           predicates:
             - Path=/test
