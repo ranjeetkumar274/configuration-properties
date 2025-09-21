@@ -1,7 +1,6 @@
 server:
   port: 3333
 
-
 spring:
   cloud:
     gateway:
@@ -11,12 +10,10 @@ spring:
           lower-case-service-id: true
       routes:
         - id: platform-demo
-          uri: PLATFORM-DEMO
+          uri: lb://PLATFORM-DEMO
           predicates:
-            - Path=/tests
+            - Path=/tests/**
 
-
-# Eureka client configuration for service discovery
 eureka:
   client:
     service-url:
