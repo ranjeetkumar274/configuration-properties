@@ -11,9 +11,9 @@ spring:
           lower-case-service-id: true
       routes:
         - id: platform-demo
-          uri: http://localhost:9090
+          uri: PLATFORM-DEMO
           predicates:
-            - Path=/test/**
+            - Path=/tests/**
 
 
 # Eureka client configuration for service discovery
