@@ -6,15 +6,15 @@ spring:
     name: Api-Gateway
   cloud:
     gateway:
+      discovery.locator:
+        enabled: true
+        lowerCaseServiceId: true
       routes:
-        - id: PLATFORM-DEMO
-          uri: lb://Platform-Demo  # Load balanced URI to Platform-Demo service
+        - id: platform-demo
+          uri: lb:PLATFORM-DEMO
           predicates:
             - Path=/test/**
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+        
 
 # Eureka client configuration for service discovery
 eureka:
