@@ -4,17 +4,19 @@ server:
 spring:
   application:
     name: Api-Gateway
+spring:
   cloud:
     gateway:
-      discovery.locator:
-        enabled: true
-        lowerCaseServiceId: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: platform-demo
-          uri: lb:PLATFORM-DEMO
+          uri: http://localhost:9090
           predicates:
             - Path=/test/**
-        
+
 
 # Eureka client configuration for service discovery
 eureka:
